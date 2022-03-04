@@ -1,0 +1,10 @@
+# create an user
+POST {{baseUrl}}users
+Content-Type: application/json
+
+{
+  "name": "simone",
+  "birthDate": "2000-03-04T01:31:50.026+00:00"
+}
+
+###
