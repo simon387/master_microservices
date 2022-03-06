@@ -14,3 +14,8 @@ GET {{baseUrl}}users/342
 
 ###
 
+# delete an user
+DELETE {{baseUrl}}users/3
+
+###
+
