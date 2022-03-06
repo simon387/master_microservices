@@ -10,7 +10,7 @@ Content-Type: application/json
 ###
 
 # retrieve an user
-GET {{baseUrl}}users/342
+GET {{baseUrl}}users/2
 
 ###
 
