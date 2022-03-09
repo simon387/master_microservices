@@ -35,3 +35,8 @@ Accept: application/xml
 GET {{baseUrl}}filtering
 
 ###
+
+# filter-list example
+GET {{baseUrl}}filtering-list
+
+###
