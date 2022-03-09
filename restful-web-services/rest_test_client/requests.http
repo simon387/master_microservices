@@ -15,8 +15,9 @@ Content-Type: application/json
 
 ###
 
-# retrieve an user
+# retrieve an user with auth on (comment/decomment POM.xml)
 GET {{baseUrl}}users/2
+Authorization: Basic user f0dd95c8-e85f-4fb0-9808-8216fe08140ak
 
 ###
 
@@ -40,3 +41,41 @@ GET {{baseUrl}}filtering
 GET {{baseUrl}}filtering-list
 
 ###
+
+# versions examples
+GET {{baseUrl}}v1/person
+
+###
+
+GET {{baseUrl}}v2/person
+
+###
+
+GET {{baseUrl}}person/param?version=1
+
+###
+
+GET {{baseUrl}}person/param?version=2
+
+###
+
+GET {{baseUrl}}person/header
+X-API-VERSION: 1
+
+###
+
+GET {{baseUrl}}person/header
+X-API-VERSION: 2
+
+###
+
+GET {{baseUrl}}person/produces
+Accept: application/vnd.company.app-v1+json
+
+###
+
+GET {{baseUrl}}person/produces
+Accept: application/vnd.company.app-v2+json
+
+###
+
