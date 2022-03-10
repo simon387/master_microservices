@@ -12,4 +12,4 @@
 
 ### h2
 + jdbc:h2:mem:testdb
-+ data.sql se lo carica in automatico all'inizio
++ data.sql se lo carica in automatico all'inizio (non mettere spazi)

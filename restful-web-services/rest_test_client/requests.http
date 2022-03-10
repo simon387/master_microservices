@@ -102,5 +102,5 @@ Content-Type: application/json
 
 ###
 
-GET {{baseUrl}}jpa/users/10001
+GET {{baseUrl}}jpa/users/10001/posts
 
