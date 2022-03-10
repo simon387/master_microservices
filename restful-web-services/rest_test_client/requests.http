@@ -79,3 +79,10 @@ Accept: application/vnd.company.app-v2+json
 
 ###
 
+#jpa
+GET {{baseUrl}}jpa/users
+
+###
+
+GET {{baseUrl}}jpa/users/1
+
