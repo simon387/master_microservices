@@ -18,10 +18,6 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 @RestController
 public class UserJPAResource {
 
-
-	@Autowired
-	private UserDaoService userDaoService;
-
 	@Autowired
 	private UserRepository userRepository;
 
@@ -31,7 +27,7 @@ public class UserJPAResource {
 	}
 
 	@GetMapping("/jpa/users/{id}")
-	public  EntityModel<User>  retrieveUser(@PathVariable int id) {
+	public EntityModel<User> retrieveUser(@PathVariable int id) {
 		Optional<User> user = userRepository.findById(id);
 		if (!user.isPresent()) {
 			throw new UserNotFoundException("id-" + id);
@@ -47,7 +43,7 @@ public class UserJPAResource {
 
 	@PostMapping("/jpa/users")
 	public ResponseEntity<Object> createUser(@Valid @RequestBody User user) {
-		User savedUser = userDaoService.save(user);
+		User savedUser = userRepository.save(user);
 
 		//we don't want to hardcode /users
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedUser.getId()).toUri();
@@ -57,9 +53,6 @@ public class UserJPAResource {
 
 	@DeleteMapping("/jpa/users/{id}")
 	public void deleteUser(@PathVariable int id) {
-		User user = userDaoService.deleteById(id);
-		if (null == user) {
-			throw new UserNotFoundException("id-" + id);
-		}
+		userRepository.deleteById(id);
 	}
 }
