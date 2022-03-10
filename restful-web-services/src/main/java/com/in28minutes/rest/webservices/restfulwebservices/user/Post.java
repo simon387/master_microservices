@@ -17,7 +17,7 @@ public class Post {
 	private String description;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-//	@JsonIgnore
+	@JsonIgnore //infinite recursion on json!!!! NON METTERE MANCO IL GETTER
 	private User user;
 
 	public Integer getId() {
@@ -34,13 +34,5 @@ public class Post {
 
 	public void setDescription(String description) {
 		this.description = description;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
 	}
 }
