@@ -102,5 +102,13 @@ Content-Type: application/json
 
 ###
 
-GET {{baseUrl}}jpa/users/10001/posts
+GET {{baseUrl}}jpa/users/10001/posts/2
 
+###
+
+POST {{baseUrl}}jpa/users/10001/posts
+Content-Type: application/json
+
+{
+  "description": "kek"
+}
