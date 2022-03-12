@@ -3,7 +3,7 @@
 ## Links
 + https://www.udemy.com/course/microservices-with-spring-boot-and-spring-cloud/learn/lecture/8005674#overview
 
-## var
+## restful-web-services sections notes
 
 ### //IGNORE THESE ANNOTATIONS
 + @ApiModel(description="All details about the user.")
