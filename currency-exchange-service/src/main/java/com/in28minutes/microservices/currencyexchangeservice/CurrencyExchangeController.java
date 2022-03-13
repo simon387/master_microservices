@@ -16,6 +16,7 @@ public class CurrencyExchangeController {
 
 	//localhost:8000/currency-exchange/from/USD/to/INR
 	//-Dserver.port=8001
+	//localhost:8000/h2-console
 	@GetMapping("/currency-exchange/from/{from}/to/{to}")
 	public CurrencyExchange retrieveExchangeValue(
 			@PathVariable String from,
